@@ -8,17 +8,17 @@
 ### Model Architecture-
 The keras model is created by training SmallerVGGNet from scratch on around 2200 face images (~1100 for each class). Face region is cropped by applying face detection using cvlib on the images gathered from Google Images. It acheived around 96% training accuracy and ~90% validation accuracy. (20% of the dataset is used for validation)
 <div align="center" class="row">
-  <img src="https://i.imgur.com/TpOlyyo.png" width="200"/>
+  <img src="https://i.imgur.com/TpOlyyo.png" width="300"/>
 </div>
 
 ### Sample Input
 <div align="center" class="row">
-  <img src="https://i.imgur.com/hc2d4hd.jpg" width="200"/>
+  <img src="https://i.imgur.com/hc2d4hd.jpg" width="300"/>
 </div>
 
 ### Sample Input
 <div align="center" class="row">
-  <img src="https://i.imgur.com/Kt0mUlU.jpg" width="200"/>
+  <img src="https://i.imgur.com/Kt0mUlU.jpg" width="300"/>
 </div>
 
 
