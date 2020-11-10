@@ -2,14 +2,14 @@ from keras.preprocessing.image import img_to_array
 from keras.models import load_model
 from keras.utils import get_file
 import numpy as np
-import argparse
 import cv2
 import os
 import cvlib as cv
-from flask import Flask, redirect, url_for, request, render_template,g
+from flask import Flask, redirect, url_for, request, render_template,g, jsonify
 import json
 from json import JSONEncoder
-
+import base64
+import io
 
 class NumpyArrayEncoder(JSONEncoder):
     def default(self, obj):
@@ -74,34 +74,28 @@ def predict(image, model):
 app = Flask(__name__)
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
-        image = cv2.imread("1.jpg")
-        # Get the file from post request
-        if 'file' not in request.files:
-            return render_template('index.html')
-        f = request.files['file']
-        if f.filename == '':
-            return render_template('index.html')
+        image_base64=request.json["base64"]  #Send base64 field in POST
+        with open("imageToSave.png", "wb") as fh:
+            fh.write(base64.b64decode(image_base64))
+        image = cv2.imread('imageToSave.png')
 
-        # Save the file
-        basepath = os.path.dirname(__file__)
-        file_path = os.path.join(
-            basepath, secure_filename(f.filename))
-        f.save(file_path)
-    
-        image= f
         # Make prediction
         image = predict(image, model)    #Call Predict Function from model
-        cv2.imshow("gender detection", image)
-# press any key to close window           
-        cv2.waitKey()
+        #cv2.imshow("gender detection", image)
+        # press any key to close window
+        #cv2.waitKey()
         # save output
         cv2.imwrite("gender_detection.jpg", image)
         # release resources
-        cv2.destroyAllWindows()
+        #cv2.destroyAllWindows()
+
+
         
-        numpyData = {"array": image}
-        image = json.dumps(numpyData, cls=NumpyArrayEncoder)
-        return image
+        
+        with open("gender_detection.jpg", "rb") as img_file:
+            b64_string = base64.b64encode(img_file.read())
+
+        return b64_string
 
 if __name__ == '__main__':
         app.run(threaded = False)
