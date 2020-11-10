@@ -9,7 +9,7 @@ from flask import Flask, redirect, url_for, request, render_template,g, jsonify
 import json
 from json import JSONEncoder
 import base64
-import io
+from waitress import serve
 
 class NumpyArrayEncoder(JSONEncoder):
     def default(self, obj):
@@ -72,7 +72,12 @@ def predict(image, model):
     return image
 
 app = Flask(__name__)
-@app.route('/upload', methods=['GET', 'POST'])
+
+@app.route("/status")
+def check_status():
+    return jsonify({"status":"Success", "data": []})
+
+@app.route('/upload', methods=['POST'])
 def upload():
         image_base64=request.json["base64"]  #Send base64 field in POST
         with open("imageToSave.png", "wb") as fh:
@@ -97,5 +102,10 @@ def upload():
 
         return b64_string
 
-if __name__ == '__main__':
-        app.run(threaded = False)
+
+if __name__ == "__main__":  #Local
+    app.run(host="localhost", port="3435", debug=True, use_reloader=True,threaded=True)
+
+else:     #Production (Heroku)
+    port = int(os.environ.get('PORT', 33507))
+    serve(app,port=port)
