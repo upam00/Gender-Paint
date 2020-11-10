@@ -2,13 +2,13 @@
   <img src="https://i.imgur.com/ocR2K0r.png" width="400"/>
 </div>
 <h3 align="center">Gender-Paint API</h3>
-<h5 align="center">A gender recognition model trained</h5>
+<h5 align="center">A Deep Learning Model to Predict Gender From Paitings</h5>
 <br>
 
 ### Model Architecture-
 The keras model is created by training SmallerVGGNet from scratch on around 2200 face images (~1100 for each class). Face region is cropped by applying face detection using cvlib on the images gathered from Google Images. It acheived around 96% training accuracy and ~90% validation accuracy. (20% of the dataset is used for validation)
 <div align="center" class="row">
-  <img src="https://i.imgur.com/TpOlyyo.png" width="300"/>
+  <img src="https://i.imgur.com/TpOlyyo.png" width="250"/>
 </div>
 
 ### Sample Input
@@ -16,7 +16,7 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
   <img src="https://i.imgur.com/hc2d4hd.jpg" width="300"/>
 </div>
 
-### Sample Input
+### Sample Output
 <div align="center" class="row">
   <img src="https://i.imgur.com/Kt0mUlU.jpg" width="300"/>
 </div>
