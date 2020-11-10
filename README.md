@@ -11,6 +11,17 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
   <img src="https://i.imgur.com/TpOlyyo.png" width="200"/>
 </div>
 
+### Sample Input
+<div align="center" class="row">
+  <img src="https://i.imgur.com/hc2d4hd.jpg" width="200"/>
+</div>
+
+### Sample Input
+<div align="center" class="row">
+  <img src="https://i.imgur.com/Kt0mUlU.jpg" width="200"/>
+</div>
+
+
 ### Technologies used
 * Tensorflow
 * Keras
