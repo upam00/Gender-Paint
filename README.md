@@ -29,7 +29,7 @@
 
 
 Example input for POST:
-* Set the URL TO `https://genderpaintapi.herokuapp.com//upload`
+* Set the URL TO `https://genderpaintapi.herokuapp.com/upload`
 
 INPUT:
 ```json
@@ -38,7 +38,6 @@ INPUT:
     }
 ```
 
-<hr>
 
 ### Authors
 
