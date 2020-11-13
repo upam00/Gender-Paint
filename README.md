@@ -1,7 +1,7 @@
 <div align="center" class="row">
   <img src="https://i.imgur.com/ocR2K0r.png" width="400"/>
 </div>
-<h3 align="center">Gender-Paint API</h3>
+<h3 align="center">Gender-Paint</h3>
 <h5 align="center">A Deep Learning Model to Predict Gender From Paitings</h5>
 <br>
 
@@ -13,11 +13,11 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
 
 ### Screenshots
 <div align="center" class="row">
-  <img src="https://i.imgur.com/7gnaiMa.png" width="500"/>
+  <img src="https://i.imgur.com/7gnaiMa.png" width="800"/>
 </div>
 
 <div align="center" class="row">
-  <img src="https://i.imgur.com/87rHkSV.png" width="500"/>
+  <img src="https://i.imgur.com/87rHkSV.png" width="800"/>
 </div>
 
 
