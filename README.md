@@ -13,11 +13,11 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
 
 ### Screenshots
 <div align="center" class="row">
-  <img src="https://i.imgur.com/7gnaiMa.png" width="350"/>
+  <img src="https://i.imgur.com/7gnaiMa.png" width="500"/>
 </div>
 
 <div align="center" class="row">
-  <img src="https://i.imgur.com/87rHkSV.png" width="350"/>
+  <img src="https://i.imgur.com/87rHkSV.png" width="500"/>
 </div>
 
 
