@@ -11,6 +11,16 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
   <img src="https://i.imgur.com/TpOlyyo.png" width="250"/>
 </div>
 
+### Screenshots
+<div align="center" class="row">
+  <img src="https://i.imgur.com/7gnaiMa.png" width="350"/>
+</div>
+
+<div align="center" class="row">
+  <img src="https://i.imgur.com/87rHkSV.png" width="350"/>
+</div>
+
+
 ### Sample Input
 <div align="center" class="row">
   <img src="https://i.imgur.com/hc2d4hd.jpg" width="300"/>
@@ -28,6 +38,8 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
 * Flask
 * OpenCV
 
+### Steps to run user interface
+1. Run the file Gender Detection.exe
 
 ### Steps to run the application
 
