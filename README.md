@@ -40,6 +40,7 @@ The keras model is created by training SmallerVGGNet from scratch on around 2200
 
 ### Steps to run user interface
 1. Run the file Gender Detection.exe
+(Detailed front end source code can be found here: https://github.com/upam00/Gender-Paint/tree/Front-End)
 
 ### Steps to run the application
 
